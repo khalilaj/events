@@ -1,5 +1,5 @@
 from ..core.renderer import ConferenceRenderer
 
 
-class EventFeedbackenderer(ConferenceRenderer):
+class EventFeedbackRenderer(ConferenceRenderer):
     object_name = 'event-feedback'

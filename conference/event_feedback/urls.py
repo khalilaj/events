@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from .views import CategoryListCreate, CategoryRetrieve
+from .views import EventFeedbackListCreate, EventFeedbackRetrieve
 
 urlpatterns = [    
-    url(r'^$', CategoryListCreate.as_view(), name='list-create-category'),
-    url(r'^(?P<pk>\d+)$', CategoryRetrieve.as_view(), name='retrieve-update-category'),
+    url(r'^$', EventFeedbackListCreate.as_view(), name='list-create-event-feedback'),
+    url(r'^(?P<pk>\d+)$', EventFeedbackRetrieve.as_view(), name='retrieve-update-event-feedback'),
 ]

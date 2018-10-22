@@ -1,26 +1,21 @@
-from collections import OrderedDict
 from rest_framework import serializers
-from .models import Category
+from .models import EventFeedback
 
 
-class CategoryRetrieveSerial(serializers.ModelSerializer):
+class RetrieveUpdateSerial(serializers.ModelSerializer):
+    class Meta:
+        model = EventFeedback
+        fields = '__all__'
+        read_only_fields = ("event_id",)
+
+
+class ListCreateSerial(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
 
     class Meta:
-        model = Category
-        fields = ('id', 'name', 'business', )
-        read_only_fields = ("id", "merchant",)
-
-
-class CategoryListSerial(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ('id', 'name', 'business', )
-        read_only_fields = ("id", "merchant",)
+        model = EventFeedback
+        fields = '__all__'
+        read_only_fields = ("event_id",)
 
     def create(self, validated_data):
-        merchant = None
-        request = self.context.get("request")
-
-        if request and hasattr(request, "user"):
-            merchant = request.user
-        return Category.objects.create(merchant=merchant, **validated_data)
+        return EventFeedback.objects.create(**validated_data)

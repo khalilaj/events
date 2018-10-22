@@ -1,30 +1,30 @@
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from .models import Category
+from .models import EventFeedback
 from ..core.auth import JwtAuth
-from .renderer import CategoryRenderer
-from .serializer import CategoryRetrieveSerial, CategoryListSerial
+from .renderer import EventFeedbackRenderer
+from .serializer import ListCreateSerial, RetrieveUpdateSerial
 
 
-class CategoryListCreate(ListCreateAPIView):
+class EventFeedbackListCreate(ListCreateAPIView):
 
     authentication_classes = (JwtAuth, )
-    renderer_classes = (CategoryRenderer,)
+    renderer_classes = (EventFeedbackRenderer,)
     permission_classes = (IsAuthenticated, )
-    serializer_class = CategoryListSerial
+    serializer_class = ListCreateSerial
 
     def get_queryset(self):
-        return Category.objects.filter(merchant=self.request.user.id)
+        return EventFeedback.objects.all()
 
 
-class CategoryRetrieve(RetrieveUpdateDestroyAPIView):
+class EventFeedbackRetrieve(RetrieveUpdateDestroyAPIView):
     
     authentication_classes = (JwtAuth, )
-    renderer_classes = (CategoryRenderer, )
+    renderer_classes = (EventFeedbackRenderer, )
     permission_classes = (IsAuthenticated, )
-    serializer_class = CategoryRetrieveSerial
+    serializer_class = RetrieveUpdateSerial
 
     def get_queryset(self):
-        return Category.objects.filter(merchant=self.request.user.id)
+        return EventFeedback.objects.filter(attendant=self.request.user.id)
 

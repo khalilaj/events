@@ -2,98 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0601caa5-6075-452d-b19e-99ac4ea7ee6a" name="Default" comment="V.01 Conference API">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/conference-api.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_attendants/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_details/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_details/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/conference_feedback/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_attendants/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_attendants/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_attendants/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_attendants/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_attendants/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_responses/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_responses/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_responses/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_responses/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_responses/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_topic/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_topic/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_topic/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_topic/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_forum_topic/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_material/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/session_speaker/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/permissions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/renderer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tag/views.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/conference/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_attendant/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_attendant/renderer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_attendant/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_feedback/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_feedback/renderer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_feedback/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/event_feedback/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conference/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/conference-api.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference_api/settings.py" afterPath="$PROJECT_DIR$/conference_api/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference_api/urls.py" afterPath="$PROJECT_DIR$/conference_api/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/admin.py" afterPath="$PROJECT_DIR$/app/admin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/apps.py" afterPath="$PROJECT_DIR$/app/apps.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/conference/renderer.py" afterPath="$PROJECT_DIR$/app/conference_details/renderer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/conference/serializer.py" afterPath="$PROJECT_DIR$/app/conference_details/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/conference/urls.py" afterPath="$PROJECT_DIR$/app/conference_details/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/conference/views.py" afterPath="$PROJECT_DIR$/app/conference_details/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/core/auth.py" afterPath="$PROJECT_DIR$/app/core/auth.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/core/exceptions.py" afterPath="$PROJECT_DIR$/app/core/exceptions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/core/graph.py" afterPath="$PROJECT_DIR$/app/core/graph.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/core/models.py" afterPath="$PROJECT_DIR$/app/core/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/core/renderer.py" afterPath="$PROJECT_DIR$/app/core/renderer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event/models.py" afterPath="$PROJECT_DIR$/app/session/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event/renderer.py" afterPath="$PROJECT_DIR$/app/session/renderer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event/serializer.py" afterPath="$PROJECT_DIR$/app/session/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event/urls.py" afterPath="$PROJECT_DIR$/app/session/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event/views.py" afterPath="$PROJECT_DIR$/app/session/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_attendant/serializer.py" afterPath="$PROJECT_DIR$/app/session_forum_responses/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_attendant/urls.py" afterPath="$PROJECT_DIR$/app/session_attendants/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_feedback/serializer.py" afterPath="$PROJECT_DIR$/app/session_forum_topic/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_speaker/models.py" afterPath="$PROJECT_DIR$/app/session_speaker/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_speaker/renderer.py" afterPath="$PROJECT_DIR$/app/session_speaker/renderer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_speaker/serializer.py" afterPath="$PROJECT_DIR$/app/session_speaker/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_speaker/urls.py" afterPath="$PROJECT_DIR$/app/session_speaker/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/event_speaker/views.py" afterPath="$PROJECT_DIR$/app/session_speaker/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/tests.py" afterPath="$PROJECT_DIR$/app/tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/urls.py" afterPath="$PROJECT_DIR$/app/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/exception.py" afterPath="$PROJECT_DIR$/app/user/exception.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/models.py" afterPath="$PROJECT_DIR$/app/user/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/renderer.py" afterPath="$PROJECT_DIR$/app/user/renderer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/serializer.py" afterPath="$PROJECT_DIR$/app/user/serializer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/urls.py" afterPath="$PROJECT_DIR$/app/user/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conference/user/views.py" afterPath="$PROJECT_DIR$/app/user/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -381,10 +294,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32993197" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

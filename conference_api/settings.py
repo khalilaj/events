@@ -7,7 +7,7 @@ SECRET_KEY = "h-ahf3-dayg71aepi4)1#4v)o4(!2hyv#3=w11abcf+0oiz=89"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://q-sbs-conference.herokuapp.com"]
 
 INSTALLED_APPS = [
     "app",
@@ -65,6 +65,17 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         "TEST": {"NAME": "testdatabase"},
+    }
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'q-conference',
+        'USER': 'aj',
+        'PASSWORD': '12345678',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

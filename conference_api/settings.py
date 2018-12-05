@@ -1,6 +1,6 @@
 import os
 import dj_database_url
-
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -122,3 +122,5 @@ CORS_ORIGIN_WHITELIST = ("localhost:3000", "127.0.0.1:3000",
                          "q-sbs-conference.herokuapp.com")
 
 GRAPHENE = {"SCHEMA": "conference_api.schema.schema"}
+
+django_heroku.settings(locals())

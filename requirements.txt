@@ -21,3 +21,5 @@ singledispatch==3.4.0.3
 six==1.11.0
 virtualenv==16.0.0
 dj-database-url==0.2.1
+gunicorn
+django-heroku

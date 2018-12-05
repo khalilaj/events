@@ -1,4 +1,6 @@
 import os
+import dj_database_url
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -70,8 +72,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
@@ -101,7 +101,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
-STATIC_URL = "/static/"
+STATIC_URL = "/staticfiles/"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ("app.core.auth.JwtAuth",),

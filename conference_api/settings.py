@@ -1,7 +1,5 @@
 import os
 import dj_database_url
-import django_heroku
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = "h-ahf3-dayg71aepi4)1#4v)o4(!2hyv#3=w11abcf+0oiz=89"
@@ -123,4 +121,3 @@ CORS_ORIGIN_WHITELIST = ("localhost:3000", "127.0.0.1:3000",
 
 GRAPHENE = {"SCHEMA": "conference_api.schema.schema"}
 
-django_heroku.settings(locals())

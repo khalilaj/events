@@ -7,7 +7,9 @@ SECRET_KEY = "h-ahf3-dayg71aepi4)1#4v)o4(!2hyv#3=w11abcf+0oiz=89"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://q-sbs-conference.herokuapp.com", ]
+ALLOWED_HOSTS = ["localhost:3000", "127.0.0.1:3000","http://localhost:8100", "localhost:8100" ,
+                 "https://q-sbs-conference.herokuapp.com", "q-sbs-conference.herokuapp.com"
+ ]
 
 INSTALLED_APPS = [
     "app",

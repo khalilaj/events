@@ -8,7 +8,7 @@ SECRET_KEY = "h-ahf3-dayg71aepi4)1#4v)o4(!2hyv#3=w11abcf+0oiz=89"
 DEBUG = True
 
 ALLOWED_HOSTS = ["localhost:3000", "127.0.0.1:3000","http://localhost:8100", "localhost:8100" ,
-                 "https://q-sbs-conference.herokuapp.com", "q-sbs-conference.herokuapp.com"
+                 "https://q-sbs-conference.herokuapp.com", "q-sbs-conference.herokuapp.com",  '127.0.0.1'
  ]
 
 INSTALLED_APPS = [
@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.static",
+    "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
 
@@ -36,6 +36,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "conference_api.urls"
@@ -99,12 +100,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+STATIC_URL = "/static/"
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 ADMIN_MEDIA_PREFIX = "static/admin/"
@@ -121,3 +123,4 @@ CORS_ORIGIN_WHITELIST = ("localhost:3000", "127.0.0.1:3000",
 
 GRAPHENE = {"SCHEMA": "conference_api.schema.schema"}
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

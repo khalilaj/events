@@ -3,7 +3,160 @@
   <component name="ChangeListManager">
     <list default="true" id="0601caa5-6075-452d-b19e-99ac4ea7ee6a" name="Default" comment="V.01 Conference API">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference_api/settings.py" afterPath="$PROJECT_DIR$/conference_api/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference_api/urls.py" afterPath="$PROJECT_DIR$/conference_api/urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/autocomplete.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/autocomplete.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/base.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/base.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/changelists.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/changelists.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/dashboard.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/fonts.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/fonts.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/forms.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/forms.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/login.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/login.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/responsive.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/responsive.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/responsive_rtl.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/responsive_rtl.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/rtl.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/rtl.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/vendor/select2/select2.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/vendor/select2/select2.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/vendor/select2/select2.min.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/vendor/select2/select2.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/css/widgets.css" afterPath="$PROJECT_DIR$/conference_api/static/admin/css/widgets.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/conference_api/static/admin/fonts/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/fonts/README.txt" afterPath="$PROJECT_DIR$/conference_api/static/admin/fonts/README.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/fonts/Roboto-Bold-webfont.woff" afterPath="$PROJECT_DIR$/conference_api/static/admin/fonts/Roboto-Bold-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/fonts/Roboto-Light-webfont.woff" afterPath="$PROJECT_DIR$/conference_api/static/admin/fonts/Roboto-Light-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/fonts/Roboto-Regular-webfont.woff" afterPath="$PROJECT_DIR$/conference_api/static/admin/fonts/Roboto-Regular-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/LICENSE" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/README.txt" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/README.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/calendar-icons.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/calendar-icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/gis/move_vertex_off.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/gis/move_vertex_off.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/gis/move_vertex_on.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/gis/move_vertex_on.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-addlink.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-addlink.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-alert.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-alert.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-calendar.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-calendar.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-changelink.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-changelink.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-clock.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-clock.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-deletelink.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-deletelink.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-no.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-no.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-unknown-alt.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-unknown-alt.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-unknown.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-unknown.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/icon-yes.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/icon-yes.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/inline-delete.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/inline-delete.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/search.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/search.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/selector-icons.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/selector-icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/sorting-icons.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/sorting-icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/tooltag-add.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/tooltag-add.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/img/tooltag-arrowright.svg" afterPath="$PROJECT_DIR$/conference_api/static/admin/img/tooltag-arrowright.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/SelectBox.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/SelectFilter2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/actions.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/actions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/actions.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/autocomplete.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/autocomplete.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/calendar.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/calendar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/cancel.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/cancel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/change_form.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/change_form.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/collapse.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/collapse.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/core.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/core.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/inlines.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/inlines.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/inlines.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/jquery.init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/popup_response.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/popup_response.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/prepopulate.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/prepopulate.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/prepopulate_init.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/prepopulate_init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/timeparse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/urlify.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/urlify.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/jquery/jquery.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/jquery/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/jquery/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/LICENSE-SELECT2.md" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ar.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/az.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/az.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/bg.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/bg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ca.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/cs.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/cs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/da.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/da.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/de.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/de.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/el.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/en.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/en.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/es.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/es.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/et.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/et.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/eu.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/eu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/fa.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/fa.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/fi.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/fi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/fr.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/fr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/gl.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/gl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/he.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/he.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/hi.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/hi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/hr.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/hr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/hu.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/hu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/id.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/id.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/is.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/is.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/it.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/it.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ja.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ja.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/km.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/km.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ko.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ko.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/lt.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/lt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/lv.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/lv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/mk.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/mk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ms.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ms.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/nb.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/nb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/nl.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/nl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/pl.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/pl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/pt.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/pt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ro.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ro.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/ru.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/sk.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/sk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/sr.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/sr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/sv.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/sv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/th.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/th.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/tr.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/tr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/uk.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/uk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/vi.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/vi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/zh-CN.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/i18n/zh-TW.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/select2.full.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/select2.full.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/select2/select2.full.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/select2/select2.full.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/xregexp/xregexp.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/xregexp/xregexp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" afterPath="$PROJECT_DIR$/conference_api/static/admin/js/vendor/xregexp/xregexp.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/bootstrap-tweaks.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/bootstrap-tweaks.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/default.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/default.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/font-awesome-4.0.3.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/font-awesome-4.0.3.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/css/prettify.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/css/prettify.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/css/base.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/css/base.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/css/highlight.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/css/highlight.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/css/jquery.json-view.min.css" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/css/jquery.json-view.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/img/favicon.ico" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/img/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/img/grid.png" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/img/grid.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/js/api.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/js/api.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/js/highlight.pack.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/js/highlight.pack.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/docs/js/jquery.json-view.min.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/docs/js/jquery.json-view.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/img/glyphicons-halflings-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/img/glyphicons-halflings.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/img/grid.png" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/img/grid.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/ajax-form.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/ajax-form.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/coreapi-0.1.1.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/coreapi-0.1.1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/csrf.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/csrf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/default.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/default.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/jquery-3.3.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conference_api/staticfiles/rest_framework/js/prettify-min.js" afterPath="$PROJECT_DIR$/conference_api/static/rest_framework/js/prettify-min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +173,22 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conference_api/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+            <state relative-caret-position="161">
+              <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conference_api/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="89" lean-forward="false" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +218,7 @@
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,7 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/session_attendants/urls.py" />
         <option value="$PROJECT_DIR$/app/session/permissions.py" />
         <option value="$PROJECT_DIR$/app/conference_feedback/permissions.py" />
         <option value="$PROJECT_DIR$/app/session_attendants/permissions.py" />
@@ -140,8 +304,9 @@
         <option value="$PROJECT_DIR$/app/user/views.py" />
         <option value="$PROJECT_DIR$/app/user/urls.py" />
         <option value="$PROJECT_DIR$/j" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/conference_api/urls.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/conference_api/settings.py" />
       </list>
     </option>
@@ -179,7 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,10 +356,31 @@
               <item name="conference-api" type="462c0819:PsiDirectoryNode" />
               <item name="conference_api" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="conference-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="conference-api" type="462c0819:PsiDirectoryNode" />
+              <item name="conference_api" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="conference-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="conference-api" type="462c0819:PsiDirectoryNode" />
+              <item name="conference_api" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="conference-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="conference-api" type="462c0819:PsiDirectoryNode" />
+              <item name="conference_api" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="rest_framework" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -324,14 +509,15 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21255673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33163264" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33163264" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33163264" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -340,7 +526,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -391,20 +576,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/session_attendants/renderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/session_attendants/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/session_attendants/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -720,11 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/conference_api/static/admin/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="-221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -744,10 +914,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conference_api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="89" lean-forward="false" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conference_api/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+        <state relative-caret-position="161">
+          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="57" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

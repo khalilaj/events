@@ -100,14 +100,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles', 'static-root')
 
 STATIC_URL = "/static/"
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(PROJECT_ROOT, 'staticfiles'),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'staticfiles', 'media-root')
+MEDIA_URL = '/media/'
 
 ADMIN_MEDIA_PREFIX = "static/admin/"
 
@@ -124,3 +127,4 @@ CORS_ORIGIN_WHITELIST = ("localhost:3000", "127.0.0.1:3000",
 GRAPHENE = {"SCHEMA": "conference_api.schema.schema"}
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+

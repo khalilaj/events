@@ -13,5 +13,6 @@ class ListCreateSerial(serializers.ModelSerializer):
     class Meta:
         model = Tag
         fields = '__all__'
+        
     def create(self, validated_data):
         return Tag.objects.create(**validated_data)

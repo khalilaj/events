@@ -16,7 +16,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
         fields = (
             "email",
-            "username",
             "password",
             "user_type",
             "token",
@@ -66,8 +65,7 @@ class LoginSerializer(serializers.ModelSerializer):
             "token": account.token,
             "firstname": account.firstname,
             "lastname": account.lastname,
-            "phone_number": account.phone_number,
-            "username": account.username,
+            "phone_number": account.phone_number, 
             "profile_picture": account.profile_picture,
             "facebook_link": account.facebook_link,
             "github_link": account.github_link,
@@ -79,7 +77,6 @@ class LoginSerializer(serializers.ModelSerializer):
         model = Account
         fields = (
             "email",
-            "username",
             "password",
             "user_type",
             "token",
@@ -97,7 +94,6 @@ class LoginSerializer(serializers.ModelSerializer):
             "id",
             "token",
             "user_type",
-            "username",
             "firstname",
             "lastname",
             "phone_number",
@@ -116,7 +112,6 @@ class AccountSerializer(serializers.ModelSerializer):
         model = Account
         fields = (
             "email",
-            "username",
             "password",
             "user_type",
             "token",
@@ -151,7 +146,6 @@ class AccountDetailSerializer(serializers.ModelSerializer):
         model = Account
         fields = (
             "email",
-            "username",
             "password",
             "user_type",
             "token",

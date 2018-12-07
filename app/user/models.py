@@ -18,7 +18,7 @@ class AcountManager(BaseUserManager):
     Class that extends the django BaseUserManager
     """
 
-    def create_user(self, username, email, password, user_type, **kwargs):
+    def create_user(self, email, password, user_type, **kwargs):
         """
         Creates a basic user
 
@@ -26,15 +26,13 @@ class AcountManager(BaseUserManager):
         :rtype: An Account object a
         """
 
-        if username is None:
-            raise ValueError("Username has not been provided")
         if email is None:
             raise ValueError("Email has not been provided")
         if password is None:
             raise ValueError("Password has not been provided")
 
         account = self.model(
-            username=username, email=self.normalize_email(email), **kwargs
+         email=self.normalize_email(email), **kwargs
         )
         account.set_password(password)
         account.user_type = user_type
@@ -42,7 +40,7 @@ class AcountManager(BaseUserManager):
         print(account.id)
         return account
 
-    def create_superuser(self, username, email, password):
+    def create_superuser(self, email, password):
 
         account = self.create_user(username, email, password, "AD")
 
@@ -60,15 +58,13 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
     """
 
     email = models.EmailField(_("email address"), unique=True)
-    username = models.CharField(_("username"), max_length=30, unique=True)
-
     firstname = models.CharField(max_length=30, blank=False)
     lastname = models.CharField(max_length=30, blank=False)
     phone_regex = RegexValidator(regex=r"^\+?1?\d{10,15}$", message="  Up to 10 digits allowed.")
     phone_number = models.CharField(validators=[phone_regex], max_length=15, blank=False)
     USER_TYPE = (("SP", "Speaker"), ("AT", "Attendant"), ("AD", "Admin"))
     user_type = models.CharField(choices=USER_TYPE, blank=False, max_length=10)
-    profile_picture = models.FileField(blank=True);
+    profile_picture = models.FileField(blank=True)
     facebook_link = models.CharField(blank=True, max_length=30)
     github_link = models.CharField(blank=True, max_length=30)
     linkedIn_link = models.CharField(blank=True, max_length=30)
@@ -97,7 +93,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
         Defines the json representation of a User object.
         """
         return json.dumps(
-            {"username": self.username, "email": self.email, "active": self.is_active}
+            {"email": self.email, "active": self.is_active}
         )
 
     def email_user(self, subject, message, from_email=None, **kwargs):
@@ -121,8 +117,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
 
         token = jwt.encode(
             {
-                "id": self.id,
-                "username": self.username,
+                "id": self.id, 
                 "email": self.email,
                 "exp": stamp,
                 "iat": datetime.utcnow(),

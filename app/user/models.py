@@ -61,7 +61,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
     firstname = models.CharField(max_length=30, blank=False)
     lastname = models.CharField(max_length=30, blank=False)
     phone_regex = RegexValidator(regex=r"^\+?1?\d{10,15}$", message="  Up to 10 digits allowed.")
-    phone_number = models.CharField(validators=[phone_regex], max_length=15, blank=False)
+    phone_number = models.CharField(validators=[phone_regex], max_length=15, blank=True)
     USER_TYPE = (("SP", "Speaker"), ("AT", "Attendant"), ("AD", "Admin"))
     user_type = models.CharField(choices=USER_TYPE, blank=False, max_length=10)
     profile_picture = models.FileField(blank=True)

@@ -17,6 +17,7 @@ class Session(StrictTimestamp):
     session_location = models.CharField(blank=True, max_length=30)
     session_startTime = models.DateTimeField(blank=False)
     session_endTime = models.DateTimeField(blank=False)
+    session_image = models.FileField(verbose_name="app-logo", name=None, blank=True)
 
 
     class Meta:

@@ -19,4 +19,4 @@ class Conference(StrictTimestamp):
         verbose_name_plural = _("conferences")
 
     def __str__(self):
-        return "<Conference conference_name={} >".format( self.conference_name, )
+      return "<Conference conference_name={} >".format( self.conference_name, )

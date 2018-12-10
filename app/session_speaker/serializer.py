@@ -1,8 +1,12 @@
 from rest_framework import serializers
 from .models import SessionSpeaker
 
+from ..user.serializer import AccountDetailSerializer
+from ..user.models import Account
 
 class RetrieveUpdateSerial(serializers.ModelSerializer):
+    account = AccountDetailSerializer()
+    
     class Meta:
         model = SessionSpeaker
         fields = '__all__'

@@ -69,7 +69,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
     github_link = models.CharField(blank=True, max_length=30)
     linkedIn_link = models.CharField(blank=True, max_length=30)
     twitter_link = models.CharField(blank=True, max_length=30)
-
+    google_link = models.CharField(blank=True, max_length=30)
     objects = AcountManager()
 
     is_active = models.BooleanField(_('active'), default=True)

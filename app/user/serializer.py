@@ -28,6 +28,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
             "github_link",
             "linkedIn_link",
             "twitter_link",
+            "google_link"
         )
 
     def create(self, validate_data):
@@ -71,6 +72,7 @@ class LoginSerializer(serializers.ModelSerializer):
             "github_link": account.github_link,
             "linkedIn_link": account.linkedIn_link,
             "twitter_link": account.twitter_link,
+            "google_link": account.google_link
         }
 
     class Meta:
@@ -89,6 +91,7 @@ class LoginSerializer(serializers.ModelSerializer):
             "github_link",
             "linkedIn_link",
             "twitter_link",
+            "google_link"
         )
         read_only_fields = (
             "id",
@@ -102,6 +105,7 @@ class LoginSerializer(serializers.ModelSerializer):
             "github_link",
             "linkedIn_link",
             "twitter_link",
+            "google_link"
         )
 
 
@@ -124,6 +128,7 @@ class AccountSerializer(serializers.ModelSerializer):
             "github_link",
             "linkedIn_link",
             "twitter_link",
+            "google_link"
         )
         read_only_fields = ("token",)
 
@@ -158,6 +163,7 @@ class AccountDetailSerializer(serializers.ModelSerializer):
             "github_link",
             "linkedIn_link",
             "twitter_link",
+            "google_link"
         )
 
 

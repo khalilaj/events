@@ -5,8 +5,8 @@ from ..user.serializer import AccountDetailSerializer
 from ..user.models import Account
 
 class RetrieveUpdateSerial(serializers.ModelSerializer):
-    account = AccountDetailSerializer()
-    
+    session_speaker_id = AccountDetailSerializer()
+
     class Meta:
         model = SessionSpeaker
         fields = '__all__'

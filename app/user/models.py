@@ -64,7 +64,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
     phone_number = models.CharField(validators=[phone_regex], max_length=15, blank=True)
     USER_TYPE = (("SP", "Speaker"), ("AT", "Attendant"), ("AD", "Admin"))
     user_type = models.CharField(choices=USER_TYPE, blank=False, max_length=10)
-    profile_picture = models.FileField(blank=True)
+    profile_picture = models.FileField(verbose_name="app-logo", name=None, blank=True)
     facebook_link = models.CharField(blank=True, max_length=30)
     github_link = models.CharField(blank=True, max_length=30)
     linkedIn_link = models.CharField(blank=True, max_length=30)

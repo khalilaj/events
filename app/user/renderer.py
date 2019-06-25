@@ -1,8 +1,8 @@
 import json
-from ..core.renderer import ConferenceRenderer
+from ..core.renderer import AppRenderer;
 
 
-class AccountRenderer(ConferenceRenderer):
+class AccountRenderer(AppRenderer):
     object_name = "user"
 
     def render(self, data, media_type=None, renderer_context=None):

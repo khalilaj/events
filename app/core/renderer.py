@@ -2,7 +2,7 @@ import json
 from rest_framework.renderers import JSONRenderer
 
 
-class ConferenceRenderer(JSONRenderer):
+class AppRenderer(JSONRenderer):
     """
     This class is to be extended by other custom Renderer
     only the object_name field is required if not provided default object_name is 'objects'
@@ -28,6 +28,6 @@ class ConferenceRenderer(JSONRenderer):
 
         # If an error occurs delegate JSONRenderer to handle the error
         if data and "errors" in data:
-            return super(ConferenceRenderer, self).render(data)
+            return super(AppRenderer, self).render(data)
 
         return json.dumps({self.object_name: data})

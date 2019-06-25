@@ -40,7 +40,7 @@ class AcountManager(BaseUserManager):
 
     def create_superuser(self, email, password):
 
-        account = self.create_user(email, password, "AD")
+        account = self.create_user(email, password,)
 
         if password is None:
             raise ValueError("Superuser must have a password")
@@ -64,8 +64,7 @@ class Account(AbstractBaseUser, PermissionsMixin, StrictTimestamp):
     is_active = models.BooleanField(_('active'), default=True)
     is_staff = models.BooleanField(_('active'), default=False)
 
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["username"]
+    USERNAME_FIELD = "email" 
 
     class Meta:
         verbose_name = _("account")

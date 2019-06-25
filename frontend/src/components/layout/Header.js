@@ -1,33 +1,34 @@
 import React, { Component } from "react";
+import Background from "../../../static/frontend/logo.png";
+
+const styles = {
+  paperContainer: {
+    width: "100%",
+    height: "400px",
+    backgroundSize: "cover",
+    backgroundImage:
+      "url('https://assets.smartbygep.com/sites/default/files/top-banner/events.jpg')"
+  }
+};
 
 export class Header extends Component {
   render() {
     return (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div className="container">
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">Home
-              <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Events</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Register</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      <header
+        className="jumbotron my-4 img-fluid bg-image-full text-center text-primary"
+        style={styles.paperContainer}
+      >
+        <h1 className="display-3 mt-0 d-none d-md-block">
+          Join the Strathmore Business School Network
+        </h1>
+        <h3 className="d-none mt-0 d-md-block">
+          Discover Events Hosted by Strathmore Business School. Connect and make
+          new connections through Strathmore Business School Events
+        </h3>
+        <a href="#" className="btn mt-0 btn-primary">
+          REGISTER
+        </a>
+      </header>
     );
   }
 }

@@ -47,3 +47,4 @@ pip-selfcheck.json
 
 
 *.sqlite3
+node_modules

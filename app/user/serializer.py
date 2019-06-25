@@ -17,18 +17,11 @@ class RegistrationSerializer(serializers.ModelSerializer):
         fields = (
             "email",
             "password",
-            "user_type",
-            "token",
             "id",
             "firstname",
             "lastname",
-            "phone_number",
             "profile_picture",
-            "facebook_link",
-            "github_link",
-            "linkedIn_link",
-            "twitter_link",
-            "google_link"
+            "token",
         )
 
     def create(self, validate_data):
@@ -62,17 +55,10 @@ class LoginSerializer(serializers.ModelSerializer):
         return {
             "id": account.id,
             "email": account.email,
-            "user_type": account.user_type,
             "token": account.token,
             "firstname": account.firstname,
             "lastname": account.lastname,
-            "phone_number": account.phone_number, 
             "profile_picture": account.profile_picture,
-            "facebook_link": account.facebook_link,
-            "github_link": account.github_link,
-            "linkedIn_link": account.linkedIn_link,
-            "twitter_link": account.twitter_link,
-            "google_link": account.google_link
         }
 
     class Meta:
@@ -80,32 +66,18 @@ class LoginSerializer(serializers.ModelSerializer):
         fields = (
             "email",
             "password",
-            "user_type",
             "token",
             "id",
             "firstname",
             "lastname",
-            "phone_number",
             "profile_picture",
-            "facebook_link",
-            "github_link",
-            "linkedIn_link",
-            "twitter_link",
-            "google_link"
         )
         read_only_fields = (
             "id",
             "token",
-            "user_type",
             "firstname",
             "lastname",
-            "phone_number",
             "profile_picture",
-            "facebook_link",
-            "github_link",
-            "linkedIn_link",
-            "twitter_link",
-            "google_link"
         )
 
 
@@ -117,18 +89,11 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = (
             "email",
             "password",
-            "user_type",
             "token",
             "id",
             "firstname",
             "lastname",
-            "phone_number",
             "profile_picture",
-            "facebook_link",
-            "github_link",
-            "linkedIn_link",
-            "twitter_link",
-            "google_link"
         )
         read_only_fields = ("token",)
 
@@ -152,18 +117,11 @@ class AccountDetailSerializer(serializers.ModelSerializer):
         fields = (
             "email",
             "password",
-            "user_type",
             "token",
             "id",
             "firstname",
             "lastname",
-            "phone_number",
             "profile_picture",
-            "facebook_link",
-            "github_link",
-            "linkedIn_link",
-            "twitter_link",
-            "google_link"
         )
 
 

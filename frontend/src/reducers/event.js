@@ -1,30 +1,35 @@
-import { GET_LEADS, DELETE_LEAD, ADD_LEAD, PUT_LEAD } from "../actions/types";
+import {
+  GET_EVENT,
+  DELETE_EVENT,
+  ADD_EVENT,
+  PUT_EVENT
+} from "../actions/types";
 
 const initialState = {
-  leads: []
+  event: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_LEADS:
+    case GET_EVENT:
       return {
         ...state,
-        leads: action.payload
+        event: action.payload.event
       };
-    case DELETE_LEAD:
+    case DELETE_EVENT:
       return {
         ...state,
-        leads: state.leads.filter(lead => lead.id !== action.payload)
+        event: state.event.filter(lead => event.id !== action.payload)
       };
-    case ADD_LEAD:
+    case ADD_EVENT:
       return {
         ...state,
-        leads: [...state.leads, action.payload]
+        event: [...state.event, action.payload]
       };
-    case PUT_LEAD:
+    case PUT_EVENT:
       return {
         ...state,
-        leads: [...state.leads, action.payload]
+        event: [...state.event, action.payload]
       };
     default:
       return state;

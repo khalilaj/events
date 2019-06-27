@@ -4,8 +4,8 @@ from django.conf.urls.static import static
 
 from django.conf import settings
 urlpatterns = [
-    url(r"^login/", views.LoginView.as_view()),
-    url(r"^register/", views.RegistrationView.as_view()),
-    url(r"^user/", include("app.user.urls")),
+    url(r"^api/login/", views.LoginView.as_view()),
+    url(r"^api/register/", views.RegistrationView.as_view()),
+    url(r"^api/user/", include("app.user.urls")),
     url(r"^api/event/", include("app.event.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

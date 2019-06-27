@@ -1,7 +1,7 @@
-export const GET_LEADS = "GET_LEADS";
-export const ADD_LEAD = "ADD_LEAD";
-export const PUT_LEAD = "PUT_LEAD";
-export const DELETE_LEAD = "DELETE_LEAD";
+export const GET_EVENT = "GET_EVENT";
+export const ADD_EVENT = "ADD_EVENT";
+export const PUT_EVENT = "PUT_EVENT";
+export const DELETE_EVENT = "DELETE_EVENT";
 
 export const GET_ERRORS = "GET_ERRORS ";
 

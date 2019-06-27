@@ -1,13 +1,23 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
+
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
 import "./App.css";
 
-import Header from "./layout/Header";
+import Home from "./layout/Home";
 import NavBar from "./layout/NavBar";
 import Footer from "./layout/Footer";
 
-import UpcomingEvents from "./events/UpcomingEvents";
-import UpcomingEventsHeader from "./events/UpcomingEventsHeader";
+import Event from "./events/Event";
+import LogIn from "./auth/LogIn";
+import Register from "./auth/Register";
+import ForgotPassword from "./auth/ForgotPassword";
 
 import { Provider } from "react-redux";
 import store from "../store";
@@ -18,10 +28,14 @@ class App extends Component {
       <Provider store={store}>
         <div>
           <NavBar />
-          <Header />
           <div className="container mt-0">
-            <UpcomingEventsHeader />
-            <UpcomingEvents />
+            <Router>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/event" component={Event} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={LogIn} />
+              <Route exact path="/forgotpassword" component={ForgotPassword} />
+            </Router>
           </div>
           <Footer />
         </div>

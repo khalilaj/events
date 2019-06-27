@@ -1,0 +1,839 @@
+----------setting up virtual env, django and django rest------------
+1. ensure you have python 3 installed 
+	- python --version
+2.Install pipenv using pip/ pip3 to create a virtual env for your python project	
+	- pip install pipenv
+3.Create a virtual env - creates a pip file
+	- pipenv shell
+4.Install django and djangorest
+	- pip install django djangorestframework
+5.create a new Django project
+	- django-admin startproject leadmanager
+6.Test
+	-python manage.py runserver
+
+-----bulding a Django application----
+1.Create a new app
+	-django-admin startapp leads
+2.Open up ./project/settings.py and add the app and djangorest in INSTALLED_APPS
+	INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'leads', 
+    'rest_framework'	
+]
+3. Open up ./leads/models.py and create the Lead model:
+
+from django.db import models
+class Lead(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.CharField(max_length=300)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+4. create a migration by running:
+
+	- python manage.py makemigrations leads
+
+5. migrate the database with:
+
+	- python manage.py migrate
+
+6. Test
+
+	- python manage.py runserver
+
+
+----Django REST -----
+1. create a serializer class
+Serialization is the act of transforming an object into another data format.This way you can:
+
+-display Django models in a browser by converting them to JSON
+-make CRUD request with a JSON payload to the API
+
+NOTE: a Django REST serializer is mandatory for operating on models through the API.
+
+-Create a new file named ./leads/serializers.py. The LeadSerializer takes our Lead model and some fields:
+
+from rest_framework import serializers
+from .models import Lead
+class LeadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Lead
+        fields = ('id', 'name', 'email', 'message')
+
+2. setting up the controller for the views
+Django is a MVT framework. That is, Model – View – Template. The View takes care of the request/response lifecycle.
+
+-Open up ./leads/views.pyand create the view:
+
+from .models import Lead
+from .serializers import LeadSerializer
+from rest_framework import generics
+
+
+class LeadListCreate(generics.ListCreateAPIView):
+    queryset = Lead.objects.all()
+    serializer_class = LeadSerializer
+
+That is. With 3 lines of code we creates a view for handling GET and POST requests.
+
+
+3.setting up the route urls
+we want to make GET and POST requests to api/lead/ for listing and creating models.
+
+-To configure the URL mapping include the app urls in ./project/urls.py:
+
+from django.urls import path, include
+urlpatterns = [
+    path('', include('leads.urls')),
+]
+
+-next up create a new file named ./leads/urls.py.
+
+In this file we’ll wire up LeadListCreate to api/lead/:
+
+from django.urls import path
+from . import views
+urlpatterns = [
+    path('api/lead/', views.LeadListCreate.as_view() ),
+]
+
+
+4. Test 
+	-python manage.py runserver
+
+---Implement React to DJANGO----------
+
+1. Create a django app for the frontend
+	-django-admin startapp frontend
+2.Open up ./project/settings.py and add the app and djangorest in INSTALLED_APPS
+	INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'leads', 
+    'frontend',	
+    'rest_framework'	
+]
+
+3. prepare a directory structure for holding the React components:
+
+	- mkdir -p ./frontend/src/components
+
+4.add the static files:
+
+	- mkdir -p ./frontend/{static,templates}/frontend
+
+5.Assuming you’re in ~/YOUR_CODE_DIR/leadmanager-final/leadmanager/move to the upper directory:
+
+	- cd ..
+and initialize the environment:
+
+	- npm init -y
+
+6.install webpack, babel and react and webpack cli with:
+
+	- npm i webpack webpack-cli --save-dev
+	- npm i @babel/core babel-loader @babel/preset-env @babel/preset-react babel-plugin-transform-class-properties --save-dev
+	- npm i react react-dom prop-types --save-dev
+
+7. Configure Babel by creating a new file named .babelrc inside the project folder:
+
+{
+    "presets": [
+        "@babel/preset-env", "@babel/preset-react"
+    ],
+    "plugins": [
+        "transform-class-properties"
+    ]
+}
+
+8. create a new file named webpack.config.js for configuring babel-loader:
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  }
+};
+
+9. modify package.json file
+
+"scripts": {
+    "dev": "webpack --mode development --watch ./leadmanager/frontend/src/index.js --output ./leadmanager/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./leadmanager/frontend/src/index.js --output ./leadmanager/frontend/static/frontend/main.js"
+  },
+
+
+-------Django REST with React: the React frontend----------------
+1.create a view in ./frontend/views.py:
+
+from django.shortcuts import render
+def index(request):
+    return render(request, 'frontend/index.html')
+
+-function view for returning our template.
+
+2. create the template in ./frontend/templates/frontend/index.html: 
+	the template will call frontend/main.js which is our webpack bundle.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <title>Lead Manager</title>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+          <div id="app" class="columns"><!-- React --></div>
+    </div>
+  </section>
+</body>
+{% load static %}
+<script src="{% static "frontend/main.js" %}"></script>
+</html>
+
+3.Configure the new URL mapping to include the frontend in ./project/urls.py:
+
+urlpatterns = [
+    path('', include('leads.urls')),
+    path('', include('frontend.urls')),
+]
+
+4.create a new file named ./frontend/urls.py.
+
+In this file we’ll wire up the view to our root:
+
+from django.urls import path
+from . import views
+urlpatterns = [
+    path('', views.index ),
+]
+5. create a new file named ./frontend/src/components/App.js:
+
+import React, { Component, Fragment } from "react";
+import ReactDOM from "react-dom";
+
+
+class App extends Component {
+  render() {
+    return (
+            <div className="container">
+             <h1>WASSUP AJ</h1>
+            </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("app"));
+
+6.create a new file named ./frontend/src/index.js:
+
+import App from './components/App';
+
+7. Test 
+-Run webpack with:
+	npm run dev
+-start the development server:
+	python manage.py runserver
+
+--Configure style in the react app-----
+
+1. update your webpack.config.json file to accomodate css and sass loaders :
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+module.exports = {
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
+  module: {
+    rules: [
+     {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+         {
+      test: /\.(gif|svg|jpg|png)$/,
+      loader: "file-loader",
+    },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it uses publicPath in webpackOptions.output
+              publicPath: '../',
+              hmr: process.env.NODE_ENV === 'development',
+            },
+          },
+          'css-loader',
+        ],
+      },
+    ],
+  },
+};
+
+make sure you install the following plugins
+	- npm intsall MiniCssExtractPlugin --save
+
+
+---create an event model----
+
+1. create event model in ./app/event/model.py
+
+from django.db import models 
+
+
+class Event(models.Model):  
+    event_image = models.FileField(verbose_name="app-logo", name=None, blank=True)
+    event_name = models.CharField(max_length=30, blank=False)
+    event_venue = models.CharField(max_length=30, blank=True)
+    event_description = models.TextField(blank=True)
+    event_start_date = models.DateField(blank=False)
+    event_end_date = models.DateField(blank=False)
+
+    def __str__(self):
+        return "<Event event_name={} >".format( self.event_name, )
+
+
+2.create event serializer in ./app/event/serializer.py
+
+from rest_framework import serializers
+
+from app.event.models import Event
+
+
+class RetrieveUpdateSerial(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = '__all__'
+
+
+class ListCreateSerial(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Event
+        fields = '__all__'
+
+    def create(self, validated_data):
+        return Event.objects.create(**validated_data)
+
+3. create event renderer in ./app/event/renderer.py
+
+import json
+from ..core.renderer import AppRenderer;
+
+
+class Renderer(AppRenderer):
+    object_name = "event"
+
+4. create event view in ./app/event/view.py
+
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+
+from ..core.auth import JwtAuth
+from .models import Event
+from .serializer import RetrieveUpdateSerial, ListCreateSerial
+from .renderer import Renderer 
+
+
+class ListCreate(ListCreateAPIView):
+
+    authentication_classes = (JwtAuth,)
+    permission_classes = (AllowAny,)
+    renderer_classes = (Renderer,)
+    serializer_class = ListCreateSerial
+
+    def get_queryset(self):
+        return Event.objects.all()
+
+
+class RetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
+
+    authentication_classes = (JwtAuth,)
+    permission_classes = (IsAuthenticated,)
+    serializer_class = RetrieveUpdateSerial
+
+    def get_queryset(self):
+        return Event.objects.all()
+
+5. create event urls in ./app/event/urls.py
+
+from django.conf.urls import url
+
+from .views import ListCreate, RetrieveUpdateDestroy
+
+urlpatterns = [
+    url(r"^$", ListCreate.as_view(), name="list-create-event"),
+    url( r"^(?P<pk>\d+)$", RetrieveUpdateDestroy.as_view(),name="retrieve-event",),
+]
+
+6. add the event url in ./app/urls.py
+
+	-  url(r"^api/event/", include("app.event.urls")),
+
+
+7. add the event module in ./api/admin.py
+
+
+from django.contrib import admin
+
+from .user.models import Account 
+from .event.models import Event 
+
+models = [
+          Account,
+          Event,
+          ]
+
+admin.site.register(models)
+
+8. make migrations 
+
+	-python manage.py makemigrations 
+	-python manage.py migrate
+
+9.test 
+	-python manage.py runserver
+
+
+
+
+----------REDUX AND HTTP IMPLEMENTATION---------------
+
+
+1. install redux packages to manage your api state in the application and axios to make http requests
+
+	-npm install redux react-redux redux-thunk redux-devtools-extension
+	-npm install axios
+
+2. reload the server
+	- npm run dev
+
+3.create your application store : create a file ./frontend/src/store.js
+
+
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import rootReducer from "./reducers";
+
+const initialState = {};
+
+const middleware = [thunk];
+
+const store = createStore(
+  rootReducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware))
+);
+
+export default store;
+
+4.In src create RootReducer a folder in src called reducers : create a file called index.js
+
+- meeting place for all your reducers
+
+import { combineReducers } from "redux";
+import events from "./events";
+import errors from "./errors";
+import messages from "./messages";
+
+export default combineReducers({
+  events,
+  messages,
+  errors
+});
+
+
+
+5.add the store to App.js
+
+import { Provider } from "react-redux";
+import store from "../store";
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+            ...your components
+      </Provider>
+    );
+  }
+}
+
+6.create ./event file in the reducer folder to handle all the event state
+
+import {
+  GET_EVENT,
+  DELETE_EVENT,
+  ADD_EVENT,
+  PUT_EVENT
+} from "../actions/types";
+
+const initialState = {
+  event: []
+};
+
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case GET_EVENT:
+      return {
+        ...state,
+        event: action.payload
+      };
+    case DELETE_EVENT:
+      return {
+        ...state,
+        event: state.event.filter(lead => lead.id !== action.payload)
+      };
+    case ADD_EVENT:
+      return {
+        ...state,
+        event: [...state.event, action.payload]
+      };
+    case PUT_EVENT:
+      return {
+        ...state,
+        event: [...state.event, action.payload]
+      };
+    default:
+      return state;
+  }
+}
+
+
+7. create ../actions/types file to hold all the apps actions performed to the redux store
+
+import axios from "axios";
+
+import { createMessage, returnErrors } from "./messages";
+
+import {
+  GET_EVENT,
+  DELETE_EVENT,
+  ADD_EVENT,
+  PUT_EVENT,
+  GET_ERRORS
+} from "./types";
+
+//GET EVENT
+export const getEvent = () => dispatch => {
+  axios
+    .get("/api/event")
+    .then(res => {
+      dispatch({
+        type: GET_EVENT,
+        payload: res.data
+      });
+    })
+    .catch(err => console.log(err));
+};
+
+//DELETE EVENT
+export const deleteEvent = id => dispatch => {
+  axios
+    .delete(`/api/==event/${id}/`)
+    .then(res => {
+      dispatch(createMessage({ deleteEvent: "Event Deleted" }));
+      dispatch({
+        type: DELETE_EVENT,
+        payload: id
+      });
+    })
+    .catch(err => console.log(err));
+};
+
+//PUT EVENT
+export const putEvent = (event, id) => dispatch => {
+  axios.put(
+    `/api/leads/${id}/`,
+    event
+      .then(res => {
+        dispatch({
+          type: PUT_EVENT,
+          payload: res.data
+        });
+      })
+      .catch(err => console.log(err))
+  );
+};
+
+//ADD EVENT
+export const addEvent = event => dispatch => {
+  axios
+    .post("/api/event/", event)
+    .then(res => {
+      dispatch(createMessage({ addEvent: "Event Added" }));
+      dispatch({
+        type: ADD_EVENT,
+        payload: res.data
+      });
+    })
+    .catch(err => {
+      const errors = {
+        msg: err.response.data,
+        status: err.response.status
+      };
+      dispatch({
+        type: GET_ERRORS,
+        payload: errors
+      });
+    });
+};
+
+8.create a file ./types to store string variables for your application action types 
+
+export const GET_EVENT = "GET_EVENT";
+export const ADD_EVENT = "ADD_EVENT";
+export const PUT_EVENT = "PUT_EVENT";
+export const DELETE_EVENT = "DELETE_EVENT";
+
+export const GET_ERRORS = "GET_ERRORS ";
+
+export const CREATE_MESSAGE = "CREATE_MESSAGE ";
+
+-----handling errors and server message responses-----------
+
+1.create ./errors file in the reducer folder to handle all the error responses state
+
+import { GET_ERRORS } from "../actions/types";
+
+const initialState = {
+  msg: {},
+  status: null
+};
+
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case GET_ERRORS:
+      return {
+        msg: action.payload.msg,
+        status: action.payload.status
+      };
+    default:
+      return state;
+  }
+}
+
+2. create ./messages file in the reducer folder to handle all the server messages state
+
+
+import { CREATE_MESSAGE } from "../actions/types";
+
+const initialState = {};
+
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case CREATE_MESSAGE:
+      return (state = action.payload);
+    default:
+      return state;
+  }
+}
+
+3. create ../actions/messages file to hold all the apps actions performed to messages the redux store
+
+import { CREATE_MESSAGE, GET_ERRORS } from "./types";
+
+// CREATE MESSAGE
+export const createMessage = msg => {
+  return {
+    type: CREATE_MESSAGE,
+    payload: msg
+  };
+};
+
+// RETURN ERRORS
+export const returnErrors = (msg, status) => {
+  return {
+    type: GET_ERRORS,
+    payload: { msg, status }
+  };
+};
+
+4.test
+
+----implement redux actions on components, routes, errors and server responses -----
+1.create event.js page
+
+    <div className="container">
+
+      
+      <h1 className="my-4 text-center">All Events
+        <small>at Strathmore Business School</small>
+      </h1>
+
+     
+      <div className="row">
+        <div className="col-md-7">
+          <a href="#">
+            <img className="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+          </a>
+        </div>
+        <div className="col-md-5">
+          <h3>Project One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+          <a className="btn btn-primary" href="#">View Project</a>
+        </div>
+      </div>
+     
+
+      <hr>
+
+     
+      <div className="row">
+        <div className="col-md-7">
+          <a href="#">
+            <img className="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+          </a>
+        </div>
+        <div className="col-md-5">
+          <h3>Project Two</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+          <a className="btn btn-primary" href="#">View Project</a>
+        </div>
+      </div>
+      
+
+     
+      <hr>
+
+      <!-- Pagination -->
+      <ul className="pagination justify-content-center">
+        <li className="page-item">
+          <a className="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span className="sr-only">Previous</span>
+          </a>
+        </li>
+        <li className="page-item">
+          <a className="page-link" href="#">1</a>
+        </li>
+        <li className="page-item">
+          <a className="page-link" href="#">2</a>
+        </li>
+        <li className="page-item">
+          <a className="page-link" href="#">3</a>
+        </li>
+        <li className="page-item">
+          <a className="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+
+    </div> 
+
+2. add events to components
+
+ <div>
+        <h2>Event</h2>
+        <table className="table table-striped table-responsive ">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Venue</th>
+              <th>Descripition</th>
+              <th>Image</th>
+              <th>Actions</th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.event.map(ev => (
+              <tr key={ev.id}>
+                <td>{ev.id}</td>
+                <td>{ev.event_name}</td>
+                <td>{ev.event_venue}</td>
+                <td>{ev.event_description}</td>
+                <td><img src={ev.event_description}></img></td>
+                <td>
+                  <button className="btn btn-secondary btn-sm"> Edit</button>
+                </td>
+                <td>
+                  <button
+                    onClick={this.props.deleteEvent.bind(this, ev.id)}
+                    className="btn btn-danger btn-sm"
+                  >
+                    {" "}
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+const mapStateToProps = state => ({
+  event: state.event.event
+});
+
+export default connect(
+  mapStateToProps,
+  { getEvent, deleteEvent }
+)(Event);
+
+
+---adding routes ------
+1. Install router dependencies
+
+	-npm i react-router-dom
+
+2. add the routes to App.js
+
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
+return (
+      <Provider store={store}> 
+          <Router>
+		<Switch> 
+		  <Route exact path="/" component={Event} />		
+                  <Route exact path="/register" component={Register} />
+                  <Route exact path="/login" component={Login} />
+                </Switch>
+          </Router> 
+      </Provider>
+    );
+
+3.test 
